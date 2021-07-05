@@ -52,11 +52,11 @@
 	-o-transform: translate3d(0, 0, 0);
 	transform: translate3d(0, 0, 0)
 }
-
+/* 
 .slick-dots li button {
     background: red;
-    /* text-indent: -9999px; */
-}
+    text-indent: -9999px;
+} */
 
 .slick-track {
 	top: 0;

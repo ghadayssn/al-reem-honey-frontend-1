@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { menuItems } from "./MenuItems";
 import "./NavBar.css";
 import { Button } from "../Button";
-import icon from "./swarm.svg";
+import icon from "./beeLogo.svg";
 
 export default class NavBar extends Component {
   state = {
