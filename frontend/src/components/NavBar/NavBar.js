@@ -3,6 +3,7 @@ import { menuItems } from "./MenuItems";
 import "./NavBar.css";
 import { Button } from "../Button";
 import icon from "./beeLogo.svg";
+import { Link } from "react-router-dom";
 
 export default class NavBar extends Component {
   state = {
@@ -31,9 +32,10 @@ export default class NavBar extends Component {
             //mapping menuItems = [] form MenuItems.js
             return (
               <li key={index}>
-                <a className={item.cName} href={item.url}>
+                <Link className={item.cName} to={item.url}> 
+                {/* <Link to="/"> when clicking links on the navbar it will not refresh the whole page */}
                   {item.title}
-                </a>
+                </Link>
               </li>
             );
           })}

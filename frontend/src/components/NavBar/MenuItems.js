@@ -2,32 +2,32 @@ export const menuItems = [
   //navItems
   {
     title: "الصفحة الرئيسية",
-    url: "#",
+    url: "home-page",
     cName: "navLinks", //className
   },
   {
     title: "من نحن",
-    url: "#",
+    url: "about-us",
     cName: "navLinks", //className
   },
   {
     title: "اتصل بنا",
-    url: "#",
+    url: "contact-us",
     cName: "navLinks", //className
   },
   {
     title: "المنتجات",
-    url: "#",
+    url: "products",
     cName: "navLinks", //className
   },
   {
     title: "المقالات",
-    url: "#",
+    url: "articles",
     cName: "navLinks", //className
   },
   // {
   //   title: "Sign Up",
-  //   url: "#",
+  //   url: "sign-up",
   //   cName: "navLinksMobile", //className
   // },
 ];
