@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import honey from "../Components/HoneyIcon.png";
+import honey from "../components/HoneyIcon.png";
 import "./ContactForm.css";
 
 const ContactForm = () => {
