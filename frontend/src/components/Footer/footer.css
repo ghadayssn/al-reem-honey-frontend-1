@@ -10,6 +10,10 @@
 }
 .box > * {
   flex: 1 1 160px;
+  margin-left: 5%;
+  margin-top: 1%;
+  margin-right: 5%;
+  margin-bottom: 1%;
 }
 
 @media (max-height: 800px) {
