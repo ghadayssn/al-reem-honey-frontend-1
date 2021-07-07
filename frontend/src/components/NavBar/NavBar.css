@@ -1,6 +1,10 @@
 .navBarItems {
   direction: rtl;
-  background: linear-gradient(90deg, rgba(228,213,28,1) 0%, rgba(255,215,0,1) 92%);
+  background: linear-gradient(
+    90deg,
+    rgba(228, 213, 28, 1) 0%,
+    rgba(255, 215, 0, 1) 92%
+  );
   height: 80px;
   display: flex;
   justify-content: center;
@@ -10,7 +14,7 @@
 
 .navBarLogo {
   color: black;
-  margin-left: 10px;
+  margin-left: 1rem;
   cursor: pointer;
   justify-content: start;
 }
@@ -82,7 +86,11 @@
     transition: all 0.5s ease;
   }
   .navMenu.active {
-    background: linear-gradient(90deg, rgba(228,213,28,1) 0%, rgba(255,215,0,1) 92%);;
+    background: linear-gradient(
+      90deg,
+      rgba(228, 213, 28, 1) 0%,
+      rgba(255, 215, 0, 1) 92%
+    );
     left: 0;
     opacity: 1;
     transition: all 0.3s ease;
@@ -97,7 +105,7 @@
   .navLinks:hover {
     background-color: black;
     border-radius: 0;
-    color:#ffd700
+    color: #ffd700;
   }
   .navBarLogo {
     position: absolute;
@@ -114,11 +122,10 @@
     font-size: 1.7rem;
     cursor: pointer;
   }
-  .fa-times{
+  .fa-times {
     font-size: 2rem;
-
   }
-  .navLinksMobile{
+  .navLinksMobile {
     display: block;
     text-align: center;
     padding: 1.5rem;
@@ -129,5 +136,4 @@
     text-decoration: none;
     color: #fff;
   }
-
 }

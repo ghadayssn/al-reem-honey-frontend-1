@@ -1,18 +1,17 @@
 .flexbox {
-  height: 500px;
-  width: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  height: 20rem;
+  width: 20rem;
+  margin: 0 auto;
 }
 .flexbox div {
   width: 40%;
-  height: 30%;
+  height: 20%;
 }
 .flexbox .one,
 .flexbox .two {
   height: 45%;
+}
+.pic {
+  width: 100%;
+  height: auto;
 }
