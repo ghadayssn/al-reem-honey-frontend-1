@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { menuItems } from "./MenuItems";
 import "./NavBar.css";
-import { Button } from "../Button";
+import { Button } from "../Button/Button";
 import icon from "./beeLogo.svg";
 import { Link } from "react-router-dom";
 
