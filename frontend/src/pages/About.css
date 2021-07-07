@@ -1,17 +1,30 @@
-.flexbox {
-  height: 20rem;
-  width: 20rem;
-  margin: 0 auto;
+* {
+  box-sizing: border-box;
 }
-.flexbox div {
-  width: 40%;
-  height: 20%;
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 30px;
+  text-align: center;
 }
-.flexbox .one,
-.flexbox .two {
-  height: 45%;
+
+.flex-item-left {
+  background-color: #f1f1f1;
+  padding: 10px;
+  flex: 50%;
 }
-.pic {
-  width: 100%;
-  height: auto;
+
+.flex-item-right {
+  background-color: #dbdbdb;
+  padding: 10px;
+  flex: 50%;
+}
+
+/* Responsive layout - makes a one column-layout instead of a two-column layout */
+@media (max-width: 800px) {
+  .flex-item-right,
+  .flex-item-left {
+    flex: 100%;
+  }
 }
