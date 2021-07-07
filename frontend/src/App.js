@@ -7,6 +7,7 @@ import { Route, Switch} from "react-router-dom"; //route is a component
 // import Contact from "./pages/contactUsPage";
 // import HomePage from "./pages/homePage";
 import NotFound from "./pages/NotFound";
+import Footer from "./components/Footer/footer";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="*" component={NotFound}></Route>
         {/* every route that is different than the defined ones will render the not found component */}
       </Switch>
+      <Footer />
     </div>
   );
 }
