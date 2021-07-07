@@ -1,8 +1,9 @@
 import Carousel from "../components/Carousel/carousel";
-import BestSeller from "../components/bestSeller/bestSeller";
+import BestSeller from "../components/BestSeller/bestSeller";
+
 
 function HomePage() {
-  const desc = `المجدرة وعسل لها فوائد عديدة لكنني لا أعرفها.
+  const desc = `مجدرة وعسل لها فوائد عديدة لكنني لا أعرفها.
    كان جدي يحبها كثيرا. وأنا منذ صغري اعتدت عليها لأجل جدي.
    احب جدي كثيرا فعمره يناهز ال٩٠ ولا زال يتمتع بحس فكاهي مميز وصحته جيدة جدا.`;
 
@@ -26,7 +27,6 @@ function HomePage() {
     <div className="HomePage">
       <Carousel />
       {data.map((item, index) => {
-        console.log(index);
         return (
           <BestSeller
             name={item.title}

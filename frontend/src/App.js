@@ -5,7 +5,7 @@ import NavBar from "./components/NavBar/NavBar";
 import { Route, Switch} from "react-router-dom"; //route is a component
 // import AboutUs from "./pages/aboutUsPage";
 // import Contact from "./pages/contactUsPage";
-// import HomePage from "./pages/homePage";
+import HomePage from "./pages/homePage";
 import NotFound from "./pages/NotFound";
 import Footer from "./components/Footer/footer";
 
@@ -15,7 +15,7 @@ function App() {
       <NavBar />
        
       <Switch>
-        {/* <Route path="/" exact component={HomePage}></Route>  */}
+        <Route path="/" exact component={HomePage}></Route> 
         {/* Exact means that the url has to only contain the path which in this case is '/'(Slash) */}
         {/* Nothing after the slash */}
 

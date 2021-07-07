@@ -1,0 +1,25 @@
+.main-wrapper {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.product-title {
+  padding: 1rem;
+}
+
+.product-wrapper {
+  margin: auto;
+  width: 70%;
+}
+
+.product-image {
+  width: 70%;
+  height: 250px;
+  margin: auto;
+}
+
+.product-image-container {
+  display: flex;
+}
