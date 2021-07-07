@@ -1,12 +1,13 @@
 import React from "react";
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
-import Carousel from  './components/Carousel/carousel';
+import Footer from "./components/Footer/footer";
+
 function App() {
   return (
     <div className="App">
       <NavBar />
-      <Carousel />
+      <Footer />
     </div>
   );
 }
