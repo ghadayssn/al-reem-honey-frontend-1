@@ -15,10 +15,12 @@ const Footer = () => (
         <span>Aley,</span> Lebanon
       </p>
       <i class="fa fa-phone"></i>
-      <p>(+961)03692451</p>
+      <a href="tel:+96103692451">(+961)03692451</a>
       <i class="fa fa-facebook"></i>
       <p>
-        <a href="#">عسل الريم غروب</a>
+        <a href="https://www.facebook.com/groups/659039764615523/?ref=share">
+          عسل الريم غروب
+        </a>
       </p>
     </div>
 
