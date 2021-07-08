@@ -1,6 +1,6 @@
 import Carousel from "../components/Carousel/carousel";
 import BestSeller from "../components/BestSeller/bestSeller";
-
+import Image from "../components/FullWidthImage/image";
 
 function HomePage() {
   const desc = `مجدرة وعسل لها فوائد عديدة لكنني لا أعرفها.
@@ -35,6 +35,7 @@ function HomePage() {
           />
         );
       })}
+      <Image />
     </div>
   );
 }

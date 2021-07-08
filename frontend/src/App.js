@@ -8,15 +8,15 @@ import { Route, Switch } from "react-router-dom"; //route is a component
 import HomePage from "./pages/homePage";
 import NotFound from "./pages/NotFound";
 import Footer from "./components/Footer/footer";
+import "./components/FullWidthImage/image"
+
 function App() {
   return (
     <div className="App">
       <NavBar />
 
       <Switch>
-        <Route path="/" exact >
-          <HomePage />
-        </Route>
+        <Route path="/" exact component={HomePage}></Route>
 
         {/* Exact means that the url has to only contain the path which in this case is '/'(Slash) */}
         {/* Nothing after the slash */}
