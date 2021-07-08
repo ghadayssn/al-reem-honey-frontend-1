@@ -8,7 +8,7 @@ import { Route, Switch } from "react-router-dom"; //route is a component
 import HomePage from "./pages/homePage";
 import NotFound from "./pages/NotFound";
 import Footer from "./components/Footer/footer";
-import "./components/FullWidthImage/image"
+import LatestArticles from "./components/LatestArticles/latestArticles";
 
 function App() {
   return (

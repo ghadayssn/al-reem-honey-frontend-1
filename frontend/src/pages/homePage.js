@@ -1,7 +1,7 @@
 import Carousel from "../components/Carousel/carousel";
 import BestSeller from "../components/BestSeller/bestSeller";
 import Image from "../components/FullWidthImage/image";
-
+import LatestArticles from "../components/LatestArticles/latestArticles";
 function HomePage() {
   const desc = `مجدرة وعسل لها فوائد عديدة لكنني لا أعرفها.
    كان جدي يحبها كثيرا. وأنا منذ صغري اعتدت عليها لأجل جدي.
@@ -36,6 +36,7 @@ function HomePage() {
         );
       })}
       <Image />
+      <LatestArticles></LatestArticles>
     </div>
   );
 }
