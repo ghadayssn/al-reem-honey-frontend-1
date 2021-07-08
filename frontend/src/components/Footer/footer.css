@@ -20,7 +20,7 @@ section {
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
 	width: 100%;
-	text-align: left;
+	/* text-align: left; */
 	font: bold 16px sans-serif;
 	padding: 55px 50px;
 }
@@ -202,7 +202,7 @@ section {
     margin-top: 0;
     padding: 1rem;
     background-color: rgb(235, 195, 64);
-    position: fixed;
+    /* position: fixed; */
     bottom: 0;
     left: 0;
     width: 100%;

@@ -1,4 +1,9 @@
 .main-wrapper {
+  box-shadow: 0px 0px 8px 0px;
+  border-radius: 4px;
+  margin-right: 20px;
+  margin-left: 20px;
+
   display: grid;
   grid-template-columns: 50% 50%;
   margin-top: 4rem;
@@ -13,11 +18,14 @@
   margin: auto;
   width: 70%;
 }
-
+.product-image.right{
+  border-radius: 4px 0px 0px 4px;
+}
+.product-image.left{
+  border-radius: 0px 4px 4px 0px;
+}
 .product-image {
-  width: 70%;
-  height: 250px;
-  margin: auto;
+  width: 100%;
 }
 
 .product-image-container {
