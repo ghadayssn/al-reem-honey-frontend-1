@@ -10,6 +10,7 @@ export default class NavBar extends Component {
     clicked: false,
   };
   handleClick = () => {
+    document.getElementsByTagName("html")[0].style.overflow=!this.state.clicked? "hidden":"auto";
     this.setState({ clicked: !this.state.clicked }); //set click to the oppsoite value whenever clicked
   };
   render() {
@@ -33,7 +34,7 @@ export default class NavBar extends Component {
             return (
               <li key={index}>
                 <Link className={item.cName} to={item.url}> 
-                {/* <Link to="/"> when clicking links on the navbar it will not refresh the whole page */}
+                {/* <Link to="/"> (works with routing) when clicking links on the navbar it will not refresh the whole page */}
                   {item.title}
                 </Link>
               </li>

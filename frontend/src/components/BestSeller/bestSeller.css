@@ -1,0 +1,33 @@
+.main-wrapper {
+  box-shadow: 0px 0px 8px 0px;
+  border-radius: 4px;
+  margin-right: 140px;
+  margin-left: 140px;
+
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.product-title {
+  padding: 1rem;
+}
+
+.product-wrapper {
+  margin: auto;
+  width: 70%;
+}
+.product-image.right{
+  border-radius: 4px 0px 0px 4px;
+}
+.product-image.left{
+  border-radius: 0px 4px 4px 0px;
+}
+.product-image {
+  width: 100%;
+}
+
+.product-image-container {
+  display: flex;
+}
