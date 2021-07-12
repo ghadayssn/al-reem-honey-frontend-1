@@ -1,7 +1,14 @@
 import React, { Component } from "react";
 import { menuItems } from "./MenuItems";
 import "./NavBar.css";
-import icon from "./swarm.svg";
+import icon from "./beeLogo.svg";
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 export default class NavBar extends Component {
   state = {

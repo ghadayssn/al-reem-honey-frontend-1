@@ -36,7 +36,7 @@ function HomePage() {
         );
       })}
       <Image />
-      <LatestArticles></LatestArticles>
+      <LatestArticles />
     </div>
   );
 }

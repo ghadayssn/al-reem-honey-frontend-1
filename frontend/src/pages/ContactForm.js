@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import honey from "../components/HoneyIcon.png";
-import "./ContactForm.css";
+import honey from "../components/ContactFormm/HoneyIcon.png";
+import "../components/ContactFormm/ContactForm.css";
 
 const ContactForm = () => {
   const [status, setStatus] = useState("Submit");
@@ -25,7 +25,7 @@ const ContactForm = () => {
     alert(result.status);
   };
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} >
       <div class="some-page-wrapper">
         <div class="row">
           <div class="column">

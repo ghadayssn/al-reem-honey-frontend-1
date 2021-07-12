@@ -8,7 +8,6 @@ import { Route, Switch } from "react-router-dom"; //route is a component
 import HomePage from "./pages/homePage";
 import NotFound from "./pages/NotFound";
 import Footer from "./components/Footer/footer";
-import LatestArticles from "./components/LatestArticles/latestArticles";
 import ContactForm from "./pages/ContactForm";
 
 function App() {
@@ -25,12 +24,13 @@ function App() {
         {/* <Route path="/contact-us" component={Contact}></Route>
         <Route path="/about-us" component={AboutUs}></Route> */}
 
+        <Route path="/contact-us" component={ContactForm}></Route>
+
         <Route path="*" component={NotFound}></Route>
         {/* every route that is different than the defined ones will render the not found component */}
       </Switch>
 
       <Footer />
-      <ContactForm />
     </div>
   );
 }
