@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import { menuItems } from "./MenuItems";
 import "./NavBar.css";
-import { Button } from "../Button/Button";
-import icon from "./beeLogo.svg";
-import { Link } from "react-router-dom";
+import icon from "./swarm.svg";
 
 export default class NavBar extends Component {
   state = {
@@ -18,8 +16,7 @@ export default class NavBar extends Component {
       <nav className="navBarItems">
         <h1 className="navBarLogo">
           عسل الريم
-          <img src={icon}>
-          </img>
+          <img src={icon}></img>
         </h1>
 
         <div className="menuIconHamburger" onClick={this.handleClick}>

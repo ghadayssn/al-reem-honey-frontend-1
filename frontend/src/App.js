@@ -9,6 +9,7 @@ import HomePage from "./pages/homePage";
 import NotFound from "./pages/NotFound";
 import Footer from "./components/Footer/footer";
 import LatestArticles from "./components/LatestArticles/latestArticles";
+import ContactForm from "./pages/ContactForm";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
       </Switch>
 
       <Footer />
+      <ContactForm />
     </div>
   );
 }
