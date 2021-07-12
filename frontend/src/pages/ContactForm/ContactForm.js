@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import honey from "../components/ContactFormm/HoneyIcon.png";
-import "../components/ContactFormm/ContactForm.css";
+import honey from "./HoneyIcon.png";
+import "./ContactForm.css";
 
 const ContactForm = () => {
   const [status, setStatus] = useState("Submit");

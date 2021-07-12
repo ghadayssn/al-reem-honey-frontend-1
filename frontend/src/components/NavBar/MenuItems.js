@@ -2,7 +2,7 @@ export const menuItems = [
   //navItems
   {
     title: "الصفحة الرئيسية",
-    url: "home-page",
+    url: "/",
     cName: "navLinks", //className
   },
   {

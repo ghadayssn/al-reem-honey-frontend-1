@@ -3,6 +3,7 @@ label {
   font-weight: bold;
   margin-bottom: 5px;
 }
+
 input[type="text"],
 input[type="email"],
 textarea {
@@ -12,6 +13,7 @@ textarea {
   width: 300px;
   margin-bottom: 10px;
 }
+
 button {
   background-color: #000;
   color: #fff;
@@ -27,7 +29,13 @@ button {
 
 .some-page-wrapper {
   margin: 15px;
-  border: orangered solid 0.2rem;
+  /* border: #ff4500 solid 0.2rem; */
+  height:70vh;
+  width:60%;
+  padding-top: 5rem;
+  margin: auto;
+  /* padding-top:6%; */
+
 }
 
 .row {
@@ -35,7 +43,12 @@ button {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  margin: 80px 0px; 
+  /*  */
+  /* margin: 80px 0px;  */
+}
+
+.first-column{
+  padding-top:1rem; 
 }
 
 .column {
