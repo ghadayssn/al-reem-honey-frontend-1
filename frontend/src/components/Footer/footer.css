@@ -1,5 +1,5 @@
- .App{
-  height:100vh;
+.App {
+  height: 100vh;
 }
 
 /* .wrapper{
@@ -24,13 +24,12 @@
   margin-bottom: 1%;
 }
 
-@media (max-height: 800px) {
-  footer {
-    position: static;
-    position: absolute;
-    margin-bottom: 0;
-    left: 0;
+@media (max-width: 800px) {
+  .footer {
+    position: relative;
     bottom: 0;
+    left: 0;
     width: 100%;
+    margin-top: auto;
   }
 }

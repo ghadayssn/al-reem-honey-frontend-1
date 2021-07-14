@@ -5,12 +5,12 @@ import LOGO from "./logo.jpg";
 const Footer = () => (
   <div className="wrapper">
     <div class="footer">
-      <div>
+      <div class="1">
         <img src={LOGO} width="20%" alt="LOGO" />
         <p class="footer-company-name"> عسل الريم © 2021</p>
       </div>
 
-      <div>
+      <div class="2">
         <i class="fa fa-map-marker"></i>
         <p>
           <span>عاليه,</span> لبنان
@@ -25,7 +25,7 @@ const Footer = () => (
         </p>
       </div>
 
-      <div>
+      <div class="3">
         <p class="footer-company-about">
           <h3> المجدرة والعسل </h3>
           مجدرة وعسل لها فوائد عديدة لكنني لا أعرفها. كان جدي يحبها كثيرا. وأنا
