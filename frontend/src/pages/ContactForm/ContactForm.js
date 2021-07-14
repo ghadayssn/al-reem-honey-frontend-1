@@ -25,7 +25,7 @@ const ContactForm = () => {
     alert(result.status);
   };
   return (
-    <form onSubmit={handleSubmit} >
+    <form onSubmit={handleSubmit}>
       <div class="some-page-wrapper">
         <div class="row">
           <div class="column">
@@ -37,15 +37,15 @@ const ContactForm = () => {
           <div class="column">
             <div class="second-column">
               <div>
-                <label htmlFor="name">:اﻹسم</label>
+                <label htmlFor="name">اﻹسم</label>
                 <input type="text" id="name" required />
               </div>
               <div>
-                <label htmlFor="email">:البريد اﻹلتكروني</label>
+                <label htmlFor="email">البريد اﻹلتكروني</label>
                 <input type="email" id="email" required />
               </div>
               <div>
-                <label htmlFor="message">:الرسالة</label>
+                <label htmlFor="message">الرسالة</label>
                 <textarea id="message" required />
               </div>
               <button type="submit">أرسل- {status}</button>
