@@ -31,7 +31,7 @@ const ContactForm = () => {
         <div class="row">
           <div class="column">
             <div class="first-column">
-              <img src={honey} alt="honey image" />
+              <img class="imagee" src={honey} alt="honey image" />
             </div>
           </div>
 

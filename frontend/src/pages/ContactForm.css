@@ -53,3 +53,18 @@ button {
 .second-column {
   height: 100px;
 }
+
+@media (max-width: 800px) {
+  .column {
+    display: flex;
+    flex-direction: column;
+    height: 10%;
+  }
+  .imagee {
+    width: 20%;
+    height: 20%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
