@@ -30,12 +30,11 @@ button {
 .some-page-wrapper {
   margin: 15px;
   /* border: #ff4500 solid 0.2rem; */
-  height:70vh;
-  width:60%;
+  height: 70vh;
+  width: 60%;
   padding-top: 5rem;
   margin: auto;
   /* padding-top:6%; */
-
 }
 
 .row {
@@ -47,8 +46,8 @@ button {
   /* margin: 80px 0px;  */
 }
 
-.first-column{
-  padding-top:1rem; 
+.first-column {
+  padding-top: 1rem;
 }
 
 .column {
@@ -56,4 +55,19 @@ button {
   flex-direction: column;
   flex-basis: 100%;
   flex: 1;
+}
+
+@media (max-width: 800px) {
+  .column {
+    display: flex;
+    flex-direction: column;
+    height: 10%;
+  }
+  .imagee {
+    width: 20%;
+    height: 20%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
