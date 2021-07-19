@@ -3,7 +3,7 @@ import "./bestSeller.css";
 
 const BestSeller = (props) => {
   const position = props.pos;
-  // console.log(position);
+
   return position ? (
     <div className="main-wrapper card">
       <div className="product-wrapper">
@@ -13,8 +13,8 @@ const BestSeller = (props) => {
       <div className="product-image-container">
         <img
           className="product-image right"
-          src="https://picsum.photos/800/301/?random"
-          alt="2"
+          src={`http://localhost:5000/images/${props.urlImage}`}
+          alt="alt image"
         />
       </div>
     </div>
@@ -23,7 +23,7 @@ const BestSeller = (props) => {
       <div className="product-image-container">
         <img
           className="product-image left"
-          src="https://picsum.photos/800/301/?random"
+          src={`http://localhost:5000/images/${props.urlImage}`}
           alt="2"
         />
       </div>
