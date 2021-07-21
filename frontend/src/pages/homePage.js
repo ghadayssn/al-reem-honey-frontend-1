@@ -4,12 +4,13 @@ import Image from "../components/FullWidthImage/image";
 import LatestArticles from "../components/LatestArticles/latestArticles";
 import { useState, useEffect } from "react";
 
-import { URL } from "./global"
+import { URL } from "./global";
 
 const HomePage = () => {
   const [data, setData] = useState([]);
   const [bestSeller, setBestSeller] = useState([]);
   const [carouselImages, setCarouselImages] = useState([]);
+  const [fullWidthImage, setFullWidthImage] = useState([]);
 
   const fetchData = () => {
     return fetch(`${URL}/getHomePageData`)
@@ -48,7 +49,7 @@ const HomePage = () => {
             />
           );
         })}
-      <Image />
+      <Image image={fullWidthImage} />
       <LatestArticles />
     </div>
   );
