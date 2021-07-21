@@ -4,12 +4,15 @@ import Image from "../components/FullWidthImage/image";
 import LatestArticles from "../components/LatestArticles/latestArticles";
 import { useState, useEffect } from "react";
 
+import { URL } from "./global"
+
 const HomePage = () => {
   const [data, setData] = useState([]);
   const [bestSeller, setBestSeller] = useState([]);
+  const [carouselImages, setCarouselImages] = useState([]);
 
   const fetchData = () => {
-    return fetch("http://localhost:5000/product/getBestSeller")
+    return fetch(`${URL}/getHomePageData`)
       .then((res) => {
         if (res.ok) {
           // console.log("ok");
@@ -18,7 +21,8 @@ const HomePage = () => {
       })
       .then((jsonRes) => {
         setData(jsonRes.data);
-        setBestSeller(jsonRes.data);
+        setCarouselImages(jsonRes.data.images);
+        setBestSeller(jsonRes.data.products);
       })
       .catch((err) => {
         console.log(err.message);
@@ -31,7 +35,7 @@ const HomePage = () => {
   }, []);
   return (
     <div className="HomePage">
-      <Carousel />
+      <Carousel images={carouselImages} />
       {bestSeller &&
         bestSeller.map((best, index) => {
           return (
