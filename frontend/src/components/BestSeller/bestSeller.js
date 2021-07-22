@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./bestSeller.css";
 
 const BestSeller = (props) => {
@@ -16,7 +16,7 @@ const BestSeller = (props) => {
           <img
             className="product-image right"
             src={`http://localhost:5000/images/${props.urlImage}`}
-            alt="alt image"
+            alt="best seller product images"
           />
         </div>
       </div>
@@ -28,7 +28,7 @@ const BestSeller = (props) => {
           <img
             className="product-image left"
             src={`http://localhost:5000/images/${props.urlImage}`}
-            alt="2"
+            alt="best seller product images"
           />
         </div>
         <div className="product-wrapper">

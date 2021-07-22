@@ -1,6 +1,6 @@
 import Carousel from "../components/Carousel/carousel";
 import BestSeller from "../components/BestSeller/bestSeller";
-import Image from "../components/FullWidthImage/image";
+import FullWidthImage from "../components/FullWidthImage/image";
 import LatestArticles from "../components/LatestArticles/latestArticles";
 import { useState, useEffect } from "react";
 
@@ -22,8 +22,9 @@ const HomePage = () => {
       })
       .then((jsonRes) => {
         setData(jsonRes.data);
-        setCarouselImages(jsonRes.data.images);
+        setCarouselImages(jsonRes.data.carImages);
         setBestSeller(jsonRes.data.products);
+        setFullWidthImage(jsonRes.data.fullWidImage);
       })
       .catch((err) => {
         console.log(err.message);
@@ -31,7 +32,6 @@ const HomePage = () => {
   };
   useEffect(() => {
     fetchData();
-    console.log("test");
     console.log("data", data);
   }, []);
   return (
@@ -49,7 +49,7 @@ const HomePage = () => {
             />
           );
         })}
-      <Image image={fullWidthImage} />
+      <FullWidthImage image={fullWidthImage} />
       <LatestArticles />
     </div>
   );

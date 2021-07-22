@@ -14,13 +14,13 @@ import "./image.css";
 // }
 
 const FullWidthImage = (props) => {
-  const singleImage = props.singleImage;
+  // const singleImage = props.singleImage;
   return (
     <div>
       <img
         className="image"
-        src={`${URL}/fullWidthImage/${singleImage}`}
-        alt="random image"
+        src={`${URL}/fullWidthImage/${props.singleImage}`}
+        alt="Honey bee"
       />
     </div>
   );

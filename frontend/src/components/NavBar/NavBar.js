@@ -4,11 +4,7 @@ import "./NavBar.css";
 import icon from "./beeLogo.svg";
 
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+  BrowserRouter as Link } from "react-router-dom";
 
 export default class NavBar extends Component {
   state = {
