@@ -32,7 +32,7 @@ export default class NavBar extends Component {
           {menuItems.map((item, index) => {
             //mapping menuItems = [] form MenuItems.js
             return (
-              <li key={index}>
+              <li key={index} className=" navLinks">
                 <Link className={item.cName} to={item.url}> 
                 {/* <Link to="/"> (works with routing) when clicking links on the navbar it will not refresh the whole page */}
                   {item.title}
