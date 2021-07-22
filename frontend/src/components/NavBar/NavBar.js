@@ -18,7 +18,7 @@ export default class NavBar extends Component {
       <nav className="navBarItems">
         <h1 className="navBarLogo">
           عسل الريم
-          <img src={icon}></img>
+          <img src={icon} alt="logo"></img>
         </h1>
 
         <div className="menuIconHamburger" onClick={this.handleClick}>

@@ -42,7 +42,7 @@ const HomePage = () => {
   useEffect(() => {
     fetchData();
     console.log("data", data);
-  }, []);
+  });
   return (
     <div className="HomePage">
       <Carousel images={carouselImages} />
@@ -60,7 +60,7 @@ const HomePage = () => {
         })}
       {fullWidthImage && <FullWidthImage image={fullWidthImage} />}
 
-      {latestArticles && <LatestArticles latestArticles={latestArticles} />}
+      {latestArticles && <LatestArticles title="أحدث المقالات" latestArticles={latestArticles} />}
     </div>
   );
 };

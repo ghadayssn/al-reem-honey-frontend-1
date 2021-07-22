@@ -5,6 +5,7 @@ import NavBar from "./components/NavBar/NavBar";
 import { Route, Switch } from "react-router-dom"; //route is a component
 // import AboutUs from "./pages/aboutUsPage";
 // import Contact from "./pages/contactUsPage";
+import ArticlesPage from "./pages/articlesPage"; 
 import HomePage from "./pages/homePage";
 import NotFound from "./pages/NotFound";
 import Footer from "./components/Footer/footer";
@@ -25,7 +26,7 @@ function App() {
         <Route path="/about-us" component={AboutUs}></Route> */}
 
         <Route path="/contact-us" component={ContactForm}></Route>
-
+        <Route exact path="/articles" component={ArticlesPage}></Route>
         <Route path="*" component={NotFound}></Route>
         {/* every route that is different than the defined ones will render the not found component */}
       </Switch>
