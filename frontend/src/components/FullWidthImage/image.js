@@ -21,7 +21,7 @@ const FullWidthImage = (props) => {
     <div>
       <img
         className="image"
-        src={`${URL}/fullWidthImage/${props.fullWidthImage}`}
+        src={`${URL}/fullWidthImage/${props.image}`}
         alt="Honey bee"
       />
     </div>

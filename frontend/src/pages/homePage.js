@@ -10,7 +10,7 @@ const HomePage = () => {
   const [data, setData] = useState([]);
   const [bestSeller, setBestSeller] = useState([]);
   const [carouselImages, setCarouselImages] = useState([]);
-  const [fullWidthImage, setFullWidthImage] = useState([]);
+  const [fullWidthImage, setFullWidthImage] = useState("");
   const [latestArticles, setLatestArticles] = useState([]);
 
   const fetchData = () => {
@@ -22,11 +22,18 @@ const HomePage = () => {
         }
       })
       .then((jsonRes) => {
-        setData(jsonRes.data);
-        setCarouselImages(jsonRes.data.carImages);
-        setBestSeller(jsonRes.data.products);
-        setFullWidthImage(jsonRes.data.fullWidImage);
-        setLatestArticles(jsonRes.data.latestThreeArticles);
+        if (jsonRes && jsonRes.data) {
+          setData(jsonRes.data);
+          setCarouselImages(jsonRes.data.carImages);
+          setBestSeller(jsonRes.data.products);
+          if (
+            jsonRes.data.fullWidImage &&
+            jsonRes.data.fullWidImage.length > 0
+          ) {
+            setFullWidthImage(jsonRes.data.fullWidImage[0].image);
+          }
+          setLatestArticles(jsonRes.data.latestThreeArticles);
+        }
       })
       .catch((err) => {
         console.log(err.message);
@@ -51,19 +58,9 @@ const HomePage = () => {
             />
           );
         })}
-      <FullWidthImage image={fullWidthImage} />
-      {latestArticles &&
-        latestArticles.map((latest, index) => {
-          return (
-            <LatestArticles
-              key={index}
-              title={latest.title}
-              author={latest.author}
-              body={latest.description}
-              urlImagee={latest.image}
-            />
-          );
-        })}
+      {fullWidthImage && <FullWidthImage image={fullWidthImage} />}
+
+      {latestArticles && <LatestArticles latestArticles={latestArticles} />}
     </div>
   );
 };

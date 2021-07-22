@@ -36,3 +36,13 @@
 .product-image-container {
   display: flex;
 }
+
+@media screen and (max-width:790px) {
+  .main-wrapper {
+    margin: 10px;
+  }
+  .section-title {
+    margin: 2rem 0rem 1rem 0rem;
+    padding: 2rem;
+  }
+}
