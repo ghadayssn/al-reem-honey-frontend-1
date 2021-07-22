@@ -1,5 +1,7 @@
 import React from "react";
 import "./image.css";
+import { URL } from "../../pages/global";
+
 
 // export default function Image() {
 //   return (
@@ -19,7 +21,7 @@ const FullWidthImage = (props) => {
     <div>
       <img
         className="image"
-        src={`${URL}/fullWidthImage/${props.singleImage}`}
+        src={`${URL}/fullWidthImage/${props.fullWidthImage}`}
         alt="Honey bee"
       />
     </div>

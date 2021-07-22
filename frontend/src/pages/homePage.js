@@ -11,6 +11,7 @@ const HomePage = () => {
   const [bestSeller, setBestSeller] = useState([]);
   const [carouselImages, setCarouselImages] = useState([]);
   const [fullWidthImage, setFullWidthImage] = useState([]);
+  const [latestArticles, setLatestArticles] = useState([]);
 
   const fetchData = () => {
     return fetch(`${URL}/getHomePageData`)
@@ -25,6 +26,7 @@ const HomePage = () => {
         setCarouselImages(jsonRes.data.carImages);
         setBestSeller(jsonRes.data.products);
         setFullWidthImage(jsonRes.data.fullWidImage);
+        setLatestArticles(jsonRes.data.latestThreeArticles);
       })
       .catch((err) => {
         console.log(err.message);
@@ -50,7 +52,18 @@ const HomePage = () => {
           );
         })}
       <FullWidthImage image={fullWidthImage} />
-      <LatestArticles />
+      {latestArticles &&
+        latestArticles.map((latest, index) => {
+          return (
+            <LatestArticles
+              key={index}
+              title={latest.title}
+              author={latest.author}
+              body={latest.description}
+              urlImagee={latest.image}
+            />
+          );
+        })}
     </div>
   );
 };
