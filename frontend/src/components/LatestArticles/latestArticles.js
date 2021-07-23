@@ -1,6 +1,7 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
 import { URL } from "../../pages/global";
+import { Link } from "react-router-dom";
 
 export default function LatestArticles(props) {
   const latestArticles = props.latestArticles;
@@ -12,6 +13,8 @@ export default function LatestArticles(props) {
           latestArticles.map((latest, index) => {
             return (
               <Grid item xs={12} sm={6} lg={4}  style={{ padding: "10px" }}>
+              <Link to={"/articles/"+latest._id}>
+                
                 <Grid
                   container
                   style={{ boxShadow: "0px 0px 8px 0px", borderRadius: "4px" }}
@@ -23,7 +26,7 @@ export default function LatestArticles(props) {
                       alt="Bees/honey"
                     />
                   </Grid>
-                  <Grid xs={12} style={{ padding: "0px 40px" }}>
+                  <Grid item xs={12} style={{ padding: "0px 40px" }}>
                     <div>
                       {/* مجدرة وعسل لها فوائد عديدة لكنني لا أعرفها. كان جدي يحبها كثيرا.
                 وأنا منذ صغري اعتدت عليها لأجل جدي. احب جدي كثيرا فعمره يناهز
@@ -36,6 +39,7 @@ export default function LatestArticles(props) {
                     </div>
                   </Grid>
                 </Grid>
+              </Link>
               </Grid>
             );
           })}

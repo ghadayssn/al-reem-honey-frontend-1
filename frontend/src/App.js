@@ -26,7 +26,7 @@ function App() {
         <Route path="/about-us" component={AboutUs}></Route> */}
 
         <Route path="/contact-us" component={ContactForm}></Route>
-        <Route exact path="/articles" component={ArticlesPage}></Route>
+        <Route path="/articles" component={ArticlesPage}></Route>
         <Route path="*" component={NotFound}></Route>
         {/* every route that is different than the defined ones will render the not found component */}
       </Switch>
