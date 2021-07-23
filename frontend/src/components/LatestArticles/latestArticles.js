@@ -11,10 +11,14 @@ export default function LatestArticles(props) {
         {latestArticles &&
           latestArticles.map((latest, index) => {
             return (
-              <Grid item xs={12} sm={6} lg={4}  style={{ padding: "10px" }}>
+              <Grid item xs={12} sm={6} lg={4} style={{ padding: "10px" }}>
                 <Grid
                   container
-                  style={{ boxShadow: "0px 0px 8px 0px", borderRadius: "4px" }}
+                  style={{
+                    boxShadow: "0px 0px 8px 0px",
+                    height: "55vh",
+                    borderRadius: "4px",
+                  }}
                 >
                   <Grid item xs={12}>
                     <img
