@@ -5,7 +5,7 @@ import NavBar from "./components/NavBar/NavBar";
 import { Route, Switch } from "react-router-dom"; //route is a component
 // import AboutUs from "./pages/aboutUsPage";
 // import Contact from "./pages/contactUsPage";
-import ArticlesPage from "./pages/articlesPage"; 
+import ArticlesPage from "./pages/articlesPage";
 import HomePage from "./pages/homePage";
 import NotFound from "./pages/NotFound";
 import Footer from "./components/Footer/footer";

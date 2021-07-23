@@ -12,34 +12,36 @@ export default function LatestArticles(props) {
         {latestArticles &&
           latestArticles.map((latest, index) => {
             return (
-              <Grid item xs={12} sm={6} lg={4}  style={{ padding: "10px" }}>
-              <Link to={"/articles/"+latest._id}>
-                
-                <Grid
-                  container
-                  style={{ boxShadow: "0px 0px 8px 0px", borderRadius: "4px" }}
-                >
-                  <Grid item xs={12}>
-                    <img
-                      className="slider-img"
-                      src={`${URL}/articleImages/${latest.image}`}
-                      alt="Bees/honey"
-                    />
-                  </Grid>
-                  <Grid item xs={12} style={{ padding: "0px 40px" }}>
-                    <div>
-                      {/* مجدرة وعسل لها فوائد عديدة لكنني لا أعرفها. كان جدي يحبها كثيرا.
+              <Grid item xs={12} sm={6} lg={4} style={{ padding: "10px" }}>
+                <Link to={"/articles/" + latest._id}>
+                  <Grid
+                    container
+                    style={{
+                      boxShadow: "0px 0px 8px 0px",
+                      borderRadius: "4px",
+                    }}
+                  >
+                    <Grid item xs={12}>
+                      <img
+                        className="slider-img"
+                        src={`${URL}/articleImages/${latest.image}`}
+                        alt="Bees/honey"
+                      />
+                    </Grid>
+                    <Grid item xs={12} style={{ padding: "0px 40px" }}>
+                      <div>
+                        {/* مجدرة وعسل لها فوائد عديدة لكنني لا أعرفها. كان جدي يحبها كثيرا.
                 وأنا منذ صغري اعتدت عليها لأجل جدي. احب جدي كثيرا فعمره يناهز
                 ال٩٠ ولا زال يتمتع بحس فكاهي مميز وصحته جيدة جدا. */}
-                      <h4>{latest.title}</h4>
-                      <p style={{ fontWeight: "bold" }}>
-                        {latest.description}{" "}
-                      </p>
-                      <p> {latest.author} </p>
-                    </div>
+                        <h4>{latest.title}</h4>
+                        <p style={{ fontWeight: "bold" }}>
+                          {latest.description}{" "}
+                        </p>
+                        <p> {latest.author} </p>
+                      </div>
+                    </Grid>
                   </Grid>
-                </Grid>
-              </Link>
+                </Link>
               </Grid>
             );
           })}

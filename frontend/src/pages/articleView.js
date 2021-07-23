@@ -17,7 +17,7 @@ const ArticleView = (props) => {
       .then((jsonRes) => {
         if (jsonRes && jsonRes.data && jsonRes.data.length > 0) {
           setArticle(jsonRes.data[0]);
-          console.log("Article", jsonRes, article);
+        //   console.log("Article", jsonRes, article);
         }
       })
       .catch((err) => {
@@ -30,35 +30,21 @@ const ArticleView = (props) => {
   });
   return (
     <div>
-      <div style={{textAlign:"center"}}>
+      <div style={{ textAlign: "center" }}>
         {article && (
           <img
-          style={{width:"60%"}}
+            style={{ width: "60%" }}
             className="article-img"
             src={`${URL}/articleImages/${article.image}`}
             alt="Bees/honey"
           />
         )}
       </div>
+      <div>{article && <h2>{article.title}</h2>}</div>
+      <div>{article && <h3>{article.author}</h3>}</div>
+      <div>{article && <p>{article.description}</p>}</div>
       <div>
-      {article && 
-          <h2>{article.title}</h2>
-        }
-      </div>
-      <div>
-      {article && 
-          <h3>{article.author}</h3>
-        }
-      </div>
-      <div>
-      {article && 
-          <p>{article.description}</p>
-        }
-      </div>
-      <div>
-      {article && 
-          <p>{new Date(article.createdAt).toLocaleDateString()}</p>
-        }
+        {article && <p>{new Date(article.createdAt).toLocaleDateString()}</p>}
       </div>
     </div>
   );
