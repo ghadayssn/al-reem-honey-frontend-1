@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 import { URL } from "./global";
 
 const HomePage = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(undefined);
   const [bestSeller, setBestSeller] = useState([]);
   const [carouselImages, setCarouselImages] = useState([]);
   const [fullWidthImage, setFullWidthImage] = useState("");
@@ -40,6 +40,7 @@ const HomePage = () => {
       });
   };
   useEffect(() => {
+    if(!data)
     fetchData();
     // console.log("data", data);
   });

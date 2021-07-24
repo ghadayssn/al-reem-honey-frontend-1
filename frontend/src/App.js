@@ -27,7 +27,7 @@ function App() {
         <Route path="/about-us" component={AboutUs}></Route> */}
 
         <Route path="/contact-us" component={ContactForm}></Route>
- <Route path="/products" component={ProductsPage}></Route>
+        {/* <Route path="/products" component={ProductsPage}></Route> */}
         <Route path="/articles" component={ArticlesPage}></Route>
 
         <Route path="*" component={NotFound}></Route>
