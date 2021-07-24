@@ -1,4 +1,4 @@
-/* @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css");
+ @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css");
 html {
   box-sizing: border-box !important;
   font-family: "Nunito Sans", sans-serif !important;
@@ -191,4 +191,4 @@ html {
     grid-template-rows: repeat(3, 1fr) !important;
     min-width: 400px !important;
   }
-} */
+}
