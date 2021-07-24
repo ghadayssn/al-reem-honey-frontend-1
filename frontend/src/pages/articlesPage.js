@@ -1,9 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { URL } from "./global";
 import LatestArticles from "../components/LatestArticles/latestArticles";
+import BasicPagination from "../components/articles/pagination";
+
+const Pagination = (props) => {
+  return (
+    <div>
+      <BasicPagination />
+    </div>
+  );
+};
 
 const ArticlesPage = (props) => {
-
   const [articles, setArticles] = useState([]);
   const fetchData = () => {
     return fetch(`${URL}/article/getAllArticles`)
