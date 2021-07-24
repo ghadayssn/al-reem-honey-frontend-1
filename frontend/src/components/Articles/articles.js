@@ -2,8 +2,8 @@ import React from "react";
 import Grid from "@material-ui/core/Grid";
 import { URL } from "../../pages/global";
 import { Link } from "react-router-dom";
-
-export default function LatestArticles(props) {
+import "./articles.css";
+export default function Articles(props) {
   const latestArticles = props.latestArticles;
   return (
     <div>
@@ -34,8 +34,11 @@ export default function LatestArticles(props) {
                 وأنا منذ صغري اعتدت عليها لأجل جدي. احب جدي كثيرا فعمره يناهز
                 ال٩٠ ولا زال يتمتع بحس فكاهي مميز وصحته جيدة جدا. */}
                         <h4>{latest.title}</h4>
-                        <p style={{ fontWeight: "bold" }}>
-                          {latest.description}{" "}
+                        <p
+                          style={{ fontWeight: "bold" }}
+                          // className="article-desc"
+                        >
+                          {latest.description.substr(0, 70)}{"..."}
                         </p>
                         <p> {latest.author} </p>
                       </div>

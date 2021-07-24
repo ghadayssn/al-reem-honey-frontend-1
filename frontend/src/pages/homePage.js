@@ -1,7 +1,7 @@
 import Carousel from "../components/Carousel/carousel";
 import BestSeller from "../components/BestSeller/bestSeller";
 import FullWidthImage from "../components/FullWidthImage/image";
-import LatestArticles from "../components/LatestArticles/latestArticles";
+import Articles from "../components/Articles/articles";
 import { useState, useEffect } from "react";
 
 import { URL } from "./global";
@@ -60,7 +60,7 @@ const HomePage = () => {
         })}
       {fullWidthImage && <FullWidthImage image={fullWidthImage} />}
 
-      {latestArticles && <LatestArticles title="أحدث المقالات" latestArticles={latestArticles} />}
+      {latestArticles && <Articles title="أحدث المقالات" latestArticles={latestArticles} />}
     </div>
   );
 };

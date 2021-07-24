@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { URL } from "./global";
+import { URL } from "../global";
 
 const ArticleView = (props) => {
   let { id } = useParams();
@@ -17,7 +17,7 @@ const ArticleView = (props) => {
       .then((jsonRes) => {
         if (jsonRes && jsonRes.data && jsonRes.data.length > 0) {
           setArticle(jsonRes.data[0]);
-        //   console.log("Article", jsonRes, article);
+          console.log("Article", jsonRes, article);
         }
       })
       .catch((err) => {
@@ -29,7 +29,7 @@ const ArticleView = (props) => {
     if (!article) fetchDataById(id);
   });
   return (
-    <div>
+    <div className="container">
       <div style={{ textAlign: "center" }}>
         {article && (
           <img
