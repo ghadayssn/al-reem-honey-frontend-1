@@ -11,6 +11,9 @@ import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import "./signIn.css";
+import { useState } from "react";
+import { URL } from "../global";
+
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -57,10 +60,46 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function SignInSide() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  async function postData(url = URL, data = {}) {
+    // Default options are marked with *
+    const response = await fetch(url, {
+      method: "POST", // *GET, POST, PUT, DELETE, etc.
+      mode: "cors", // no-cors, *cors, same-origin
+      cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+      credentials: "same-origin", // include, *same-origin, omit
+      headers: {
+        "Content-Type": "application/json",
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      redirect: "follow", // manual, *follow, error
+      referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+      body: JSON.stringify(data), // body data type must match "Content-Type" header
+    });
+    return response.json(); // parses JSON response into native JavaScript objects
+  }
+
+  const handleSignIn = async (e) => {
+    console.log(email, password);
+    if (email && email != "" && password && password != "") {
+      const res= await postData(URL + "/admin/adminAuthentication", {
+        userName: email,
+        password: password,
+      });
+      console.log(res,"res");
+    }
+  };
+
   const classes = useStyles();
 
   return (
-    <Grid container component="main" className={classes.root}>
+    <Grid
+      container
+      component="main"
+      className={classes.root + " revert-direction"}
+    >
       <CssBaseline />
       <Grid item xs={false} sm={4} md={7} className={classes.image} />
       <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
@@ -73,6 +112,10 @@ export default function SignInSide() {
           </Typography>
           <form className={classes.form} noValidate>
             <TextField
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
               variant="outlined"
               margin="normal"
               required
@@ -83,6 +126,10 @@ export default function SignInSide() {
               autoComplete="current-password"
             />
             <TextField
+              value={password}
+              onChange={(e) => {
+                setPassword(e.target.value);
+              }}
               variant="outlined"
               margin="normal"
               required
@@ -95,7 +142,7 @@ export default function SignInSide() {
             />
 
             <Button
-              type="submit"
+              onClick={handleSignIn}
               fullWidth
               variant="contained"
               color="primary"
