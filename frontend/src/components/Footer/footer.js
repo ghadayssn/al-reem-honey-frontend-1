@@ -5,7 +5,7 @@ import LOGO from "./logo.jpg";
 const Footer = () => (
   <div class="box">
     <div>
-      <img src={LOGO} width="20%" alt="LOGO" />
+      <img src={LOGO} class="honeypic" width="20%" alt="LOGO" />
       <p class="footer-company-name"> عسل الريم © 2021</p>
     </div>
 

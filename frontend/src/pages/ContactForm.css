@@ -54,7 +54,7 @@ button {
   height: 100px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
   .column {
     display: flex;
     flex-direction: column;
