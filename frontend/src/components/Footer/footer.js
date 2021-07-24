@@ -6,7 +6,7 @@ const Footer = () => (
   <div className="wrapper">
     <div class="footer">
       <div class="1">
-        <img src={LOGO} width="20%" alt="LOGO" />
+        <img src={LOGO} class="honeypic" width="20%" alt="LOGO" />
         <p class="footer-company-name"> عسل الريم © 2021</p>
       </div>
 
@@ -28,8 +28,8 @@ const Footer = () => (
       <div class="3">
         <p class="footer-company-about">
           <h3> عسل الريم </h3>
-          عسل الريم، بإدارة السيد بهاء جابر، لبيع أجود أنواع العسل المحلي. لدينا
-          جميع أنواع العسل.
+          عسل الريم، بإدارة بهاء جابر، لبيع أجود أنواع العسل المحلي. لدينا جميع
+          أنواع العسل.
         </p>
       </div>
     </div>

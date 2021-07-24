@@ -1,7 +1,10 @@
 import Slider from "react-slick";
 import "./carousel.css";
 import "./carouselTheme.css";
-const Carousel = () => {
+
+import { URL } from "../../pages/global";
+const Carousel = (props) => {
+  const images = props.images;
   const settings = {
     dots: true,
     infinite: true,
@@ -25,7 +28,18 @@ const Carousel = () => {
   };
   return (
     <Slider {...settings}>
-      <div>
+      {images.map((image) => {
+        return (
+          <div>
+            <img
+              className="slider-img"
+              src={`${URL}/carouselImages/${image.image}`}
+              alt="1"
+            />
+          </div>
+        );
+      })}
+      {/* <div>
         <img
           className="slider-img"
           src="https://picsum.photos/800/300/?random"
@@ -53,20 +67,7 @@ const Carousel = () => {
           alt="4"
         />
       </div>
-      <div>
-        <img
-          className="slider-img"
-          src="https://picsum.photos/800/304/?random"
-          alt="5"
-        />
-      </div>
-      <div>
-        <img
-          className="slider-img"
-          src="https://picsum.photos/800/304/?random"
-          alt="5"
-        />
-      </div>
+      */}
     </Slider>
   );
 };
