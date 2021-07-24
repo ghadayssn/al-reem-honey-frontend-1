@@ -1,0 +1,9 @@
+/* .card{
+    padding:10px;
+    box-shadow: 0px 0px 8px 0px;
+} */
+.article-desc {
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
