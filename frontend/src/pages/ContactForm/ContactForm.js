@@ -30,7 +30,7 @@ const ContactForm = () => {
         <div class="row">
           <div class="column">
             <div class="first-column">
-              <img class="imagee" src={honey} alt="honey image" />
+              <img src={honey} alt="honey pot" />
             </div>
           </div>
 

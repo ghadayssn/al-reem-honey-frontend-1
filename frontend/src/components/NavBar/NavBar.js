@@ -3,19 +3,17 @@ import { menuItems } from "./MenuItems";
 import "./NavBar.css";
 import icon from "./beeLogo.svg";
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default class NavBar extends Component {
   state = {
     clicked: false,
   };
   handleClick = () => {
-    document.getElementsByTagName("html")[0].style.overflow=!this.state.clicked? "hidden":"auto";
+    document.getElementsByTagName("html")[0].style.overflow = !this.state
+      .clicked
+      ? "hidden"
+      : "auto";
     this.setState({ clicked: !this.state.clicked }); //set click to the oppsoite value whenever clicked
   };
   render() {
@@ -23,7 +21,7 @@ export default class NavBar extends Component {
       <nav className="navBarItems">
         <h1 className="navBarLogo">
           عسل الريم
-          <img src={icon}></img>
+          <img src={icon} className="navbar-img"></img>
         </h1>
 
         <div className="menuIconHamburger" onClick={this.handleClick}>
@@ -36,9 +34,13 @@ export default class NavBar extends Component {
           {menuItems.map((item, index) => {
             //mapping menuItems = [] form MenuItems.js
             return (
-              <li key={index}>
-                <Link className={item.cName} to={item.url}> 
-                {/* <Link to="/"> (works with routing) when clicking links on the navbar it will not refresh the whole page */}
+              <li key={index} className=" navLinks">
+                <Link
+                  className={item.cName}
+                  onClick={this.handleClick}
+                  to={item.url}
+                >
+                  {/* <Link to="/"> (works with routing) when clicking links on the navbar it will not refresh the whole page */}
                   {item.title}
                 </Link>
               </li>
