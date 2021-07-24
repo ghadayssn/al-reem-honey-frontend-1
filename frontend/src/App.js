@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
 // import Carousel from "./components/Carousel/carousel";
-import { Route, Switch } from "react-router-dom"; //route is a component
+import { Route, Switch, withRouter } from "react-router-dom"; //route is a component
 // import AboutUs from "./pages/aboutUsPage";
 // import Contact from "./pages/contactUsPage";
 import ArticlesPage from "./pages/articlesPage";
@@ -10,15 +10,26 @@ import HomePage from "./pages/homePage";
 import NotFound from "./pages/NotFound";
 import Footer from "./components/Footer/footer";
 import ContactForm from "./pages/ContactForm/ContactForm";
+import SignInSide from "./pages/SignInSide";
 
-function App() {
+function App(props) {
+  const [pathName, setPathName] = useState("");
+  useEffect(() => {
+    setPathName(props.location.pathname);
+    console.log(
+      pathName.includes("admin"),
+      props.location.pathname,
+      "location"
+    );
+  });
+
   return (
     <div className="App">
-      <NavBar />
+      {!pathName.includes("admin") && <NavBar />}
 
       <Switch>
         <Route path="/" exact component={HomePage}></Route>
-
+        <Route path="/admin" component={SignInSide}></Route>
         {/* Exact means that the url has to only contain the path which in this case is '/'(Slash) */}
         {/* Nothing after the slash */}
 
@@ -31,9 +42,9 @@ function App() {
         {/* every route that is different than the defined ones will render the not found component */}
       </Switch>
 
-      <Footer />
+      {!pathName.includes("admin") && <Footer />}
     </div>
   );
 }
 
-export default App;
+export default withRouter(App);
