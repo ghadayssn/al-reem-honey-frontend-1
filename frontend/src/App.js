@@ -11,7 +11,7 @@ import HomePage from "./pages/homePage";
 import NotFound from "./pages/NotFound";
 import Footer from "./components/Footer/footer";
 import ContactForm from "./pages/ContactForm/ContactForm";
-import ProductsPage from "./pages/ProductsPage";
+// import ProductsPage from "./pages/ProductsPage";
 function App() {
   return (
     <div className="App">
