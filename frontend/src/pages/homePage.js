@@ -41,7 +41,7 @@ const HomePage = () => {
   };
   useEffect(() => {
     fetchData();
-    console.log("data", data);
+    // console.log("data", data);
   });
   return (
     <div className="HomePage">

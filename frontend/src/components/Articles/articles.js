@@ -6,7 +6,7 @@ import "./articles.css";
 export default function Articles(props) {
   const latestArticles = props.latestArticles;
   return (
-    <div>
+    <div className="container">  
       <h1 className="section-title"> {props.title}</h1>
       <Grid container style={{ marginTop: "2rem", marginBottom: "2rem" }}>
         {latestArticles &&
