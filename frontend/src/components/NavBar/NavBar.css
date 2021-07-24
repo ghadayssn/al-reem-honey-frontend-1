@@ -4,6 +4,9 @@
   margin: 0;
   font-family: "Montserrat", sans-serif;
 }
+.navbar-img {
+  width: 25.59px;
+}
 
 .navBarItems {
   /* direction: rtl; */
@@ -36,7 +39,6 @@
 } */
 /* USING GRID */
 .navMenu {
-  height: calc(100vh - 80px);
   overflow: auto;
   display: grid;
   grid-template-columns: repeat(5, auto);
@@ -47,9 +49,7 @@
   justify-content: end;
   margin-right: 2rem;
 }
-li.navLinks:last-child {
-  margin-bottom: 80px;
-}
+
 .navLinks {
   color: black;
   text-decoration: none; /* removes links decoration */
@@ -90,7 +90,11 @@ li.navLinks:last-child {
     opacity: 1;
     transition: all 0.5s ease;
   }
+  li.navLinks:last-child {
+    margin-bottom: 80px;
+  }
   .navMenu.active {
+    height: calc(100vh - 80px);
     display: flex;
     background: #ffd832;
     left: 0;

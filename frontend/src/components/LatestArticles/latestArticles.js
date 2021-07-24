@@ -5,8 +5,8 @@ import { URL } from "../../pages/global";
 export default function LatestArticles(props) {
   const latestArticles = props.latestArticles;
   return (
-    <div>
-      <h1 className="section-title"> أحدث المقالات</h1>
+    <div className="container">
+      <h1  style={{ marginTop: "2rem", marginBottom: "2rem" }}> أحدث المقالات</h1>
       <Grid container style={{ marginTop: "2rem", marginBottom: "2rem" }}>
         {latestArticles &&
           latestArticles.map((latest, index) => {

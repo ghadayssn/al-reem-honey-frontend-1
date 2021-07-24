@@ -45,7 +45,9 @@ const HomePage = () => {
   }, []);
   return (
     <div className="HomePage">
+      <div className="container">
       <Carousel images={carouselImages} />
+      </div>
       {bestSeller &&
         bestSeller.map((best, index) => {
           return (

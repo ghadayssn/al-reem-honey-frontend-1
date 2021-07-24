@@ -6,7 +6,7 @@ const BestSeller = (props) => {
 
   return position ? (
     <div className="MAIN">
-      <h1 className="section-title"> المنتجات الاكثر مبيعا </h1>
+      <h1 className="section-title container"> المنتجات الاكثر مبيعا </h1>
       <div className="main-wrapper card">
         <div className="product-wrapper">
           <h3 className="product-title">{props.name}</h3>

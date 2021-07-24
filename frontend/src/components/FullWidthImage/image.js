@@ -18,7 +18,7 @@ import { URL } from "../../pages/global";
 const FullWidthImage = (props) => {
   // const singleImage = props.singleImage;
   return (
-    <div>
+    <div className="container">
       <img
         className="image"
         src={`${URL}/fullWidthImage/${props.image}`}
