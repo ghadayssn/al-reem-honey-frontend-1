@@ -10,7 +10,7 @@ import HomePage from "./pages/homePage";
 import NotFound from "./pages/NotFound";
 import Footer from "./components/Footer/footer";
 import ContactForm from "./pages/ContactForm/ContactForm";
-import SignInSide from "./pages/SignInSide";
+import SignInSide from "./pages/admin/SignIn";
 
 function App(props) {
   const [pathName, setPathName] = useState("");
