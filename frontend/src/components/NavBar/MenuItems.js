@@ -7,22 +7,22 @@ export const menuItems = [
   },
   {
     title: "من نحن",
-    url: "about-us",
+    url: "/about-us",
     cName: "navLinks", //className
   },
   {
     title: "اتصل بنا",
-    url: "contact-us",
+    url: "/contact-us",
     cName: "navLinks", //className
   },
   {
     title: "المنتجات",
-    url: "products",
+    url: "/products",
     cName: "navLinks", //className
   },
   {
     title: "المقالات",
-    url: "articles",
+    url: "/articles",
     cName: "navLinks", //className
   },
   // {
