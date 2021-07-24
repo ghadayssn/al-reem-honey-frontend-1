@@ -10,14 +10,15 @@
 
 .navBarItems {
   /* direction: rtl; */
+
   background: #ffd832;
+
   height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
 }
-
 .navBarLogo {
   color: black;
   margin-left: 10px;
@@ -75,6 +76,7 @@
   display: none;
 }
 
+
 @media screen and (max-width: 1190px) {
   .navBarItems {
     position: relative;
@@ -96,6 +98,7 @@
   .navMenu.active {
     height: calc(100vh - 80px);
     display: flex;
+
     background: #ffd832;
     left: 0;
     opacity: 1;
