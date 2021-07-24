@@ -24,6 +24,10 @@
   margin-bottom: 1%;
 }
 
+.honeypic {
+  border-radius: 25%;
+}
+
 @media (max-width: 800px) {
   .footer {
     position: relative;
