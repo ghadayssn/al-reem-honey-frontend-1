@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function ResponsiveDrawer(props) {
+function Dashboard(props) {
   const { window } = props;
   const classes = useStyles();
   const theme = useTheme();
@@ -227,4 +227,4 @@ function ResponsiveDrawer(props) {
 //   window: PropTypes.func,
 // };
 
-export default ResponsiveDrawer;
+export default Dashboard;

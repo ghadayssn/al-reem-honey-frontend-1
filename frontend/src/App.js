@@ -11,7 +11,7 @@ import NotFound from "./pages/NotFound";
 import Footer from "./components/Footer/footer";
 import ContactForm from "./pages/ContactForm/ContactForm";
 import SignInSide from "./pages/admin/SignIn";
-
+import Dashboard from "./pages/admin/dashboard";
 function App(props) {
   const [pathName, setPathName] = useState("");
   useEffect(() => {
@@ -29,7 +29,8 @@ function App(props) {
 
       <Switch>
         <Route path="/" exact component={HomePage}></Route>
-        <Route path="/admin" component={SignInSide}></Route>
+        <Route path="/admin" exact component={SignInSide}></Route>
+        <Route path="/admin/dashboard" exact component={Dashboard}></Route>
         {/* Exact means that the url has to only contain the path which in this case is '/'(Slash) */}
         {/* Nothing after the slash */}
 

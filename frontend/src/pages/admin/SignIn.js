@@ -84,14 +84,22 @@ export default function SignInSide() {
   const handleSignIn = async (e) => {
     console.log(email, password);
     if (email && email != "" && password && password != "") {
-      const res= await postData(URL + "/admin/adminAuthentication", {
+      const res = await postData(URL + "/admin/adminAuthentication", {
         userName: email,
         password: password,
       });
-      console.log(res,"res");
+      console.log(res, "res");
+      if (res && res.status) {
+        window.location.href = "/admin/dashboard";
+      }
     }
   };
-
+  const handleKeyUp = async (event) => {
+    if (event.keyCode == 13) {
+     await handleSignIn(event);
+    }
+    console.log(event);
+  };
   const classes = useStyles();
 
   return (
@@ -124,6 +132,7 @@ export default function SignInSide() {
               label="Email Address"
               id="admin-email"
               autoComplete="current-password"
+              onKeyUp={handleKeyUp}
             />
             <TextField
               value={password}
@@ -138,6 +147,7 @@ export default function SignInSide() {
               label="Password"
               type="password"
               id="password"
+              onKeyUp={handleKeyUp}
               autoComplete="current-password"
             />
 
