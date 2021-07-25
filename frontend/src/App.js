@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import "./styles/productsStyle.css";
 import NavBar from "./components/NavBar/NavBar";
 // import Carousel from "./components/Carousel/carousel";
-import { Route, Switch } from "react-router-dom"; //route is a component
+import { Route, Switch, withRouter } from "react-router-dom"; //route is a component
 // import AboutUs from "./pages/aboutUsPage";
 // import Contact from "./pages/contactUsPage";
 import ArticlesPage from "./pages/articlesPage";
@@ -13,13 +13,29 @@ import Footer from "./components/Footer/footer";
 import ContactForm from "./pages/ContactForm/ContactForm";
 import ProductsPage from "./pages/ProductsPage";
 function App() {
+
+import SignInSide from "./pages/admin/SignIn";
+import Dashboard from "./pages/admin/dashboard";
+function App(props) {
+  const [pathName, setPathName] = useState("");
+  useEffect(() => {
+    setPathName(props.location.pathname);
+    console.log(
+      pathName.includes("admin"),
+      props.location.pathname,
+      "location"
+    );
+  });
+
+
   return (
     <div className="App">
-      <NavBar />
+      {!pathName.includes("admin") && <NavBar />}
 
       <Switch>
         <Route path="/" exact component={HomePage}></Route>
-
+        <Route path="/admin" exact component={SignInSide}></Route>
+        <Route path="/admin/dashboard" exact component={Dashboard}></Route>
         {/* Exact means that the url has to only contain the path which in this case is '/'(Slash) */}
         {/* Nothing after the slash */}
 
@@ -35,9 +51,9 @@ function App() {
        
       </Switch>
 
-      <Footer />
+      {!pathName.includes("admin") && <Footer />}
     </div>
   );
 }
 
-export default App;
+export default withRouter(App);
