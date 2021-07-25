@@ -1,44 +1,44 @@
-import React, { useState } from 'react';
-import AppBar from '@material-ui/core/AppBar';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Divider from '@material-ui/core/Divider';
-import Drawer from '@material-ui/core/Drawer';
-import Hidden from '@material-ui/core/Hidden';
-import IconButton from '@material-ui/core/IconButton';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import MailIcon from '@material-ui/icons/Mail';
-import MenuIcon from '@material-ui/icons/Menu';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { Link, Redirect, Route, Switch } from 'react-router-dom';
-import { Button, Avatar, TextField, InputBase } from '@material-ui/core';
+import React, { useState } from "react";
+import AppBar from "@material-ui/core/AppBar";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import Divider from "@material-ui/core/Divider";
+import Drawer from "@material-ui/core/Drawer";
+import Hidden from "@material-ui/core/Hidden";
+import IconButton from "@material-ui/core/IconButton";
+import InboxIcon from "@material-ui/icons/MoveToInbox";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+import ListItemText from "@material-ui/core/ListItemText";
+import MailIcon from "@material-ui/icons/Mail";
+import MenuIcon from "@material-ui/icons/Menu";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { Link, Redirect, Route, Switch } from "react-router-dom";
+import { Button, Avatar, TextField, InputBase } from "@material-ui/core";
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: 'flex',
+    display: "flex",
   },
   drawer: {
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up("sm")]: {
       width: drawerWidth,
       flexShrink: 0,
     },
   },
   appBar: {
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up("sm")]: {
       width: `calc(100% - ${drawerWidth}px)`,
       marginLeft: drawerWidth,
     },
   },
   menuButton: {
     marginRight: theme.spacing(2),
-    [theme.breakpoints.up('sm')]: {
-      display: 'none',
+    [theme.breakpoints.up("sm")]: {
+      display: "none",
     },
   },
   // necessary for content to be below app bar
@@ -63,68 +63,86 @@ function Dashboard(props) {
     setMobileOpen(!mobileOpen);
   };
   const handleClick = (e, selectedTab) => {
-    setSelectedTab(selectedTab)
+    setSelectedTab(selectedTab);
   };
   const sidebarItems = [
     {
-      text: 'Inbox',
-      url: "inbox"
+      text: "Home Page",
+      url: "home-page",
     },
     {
-      text: 'Starred',
-      url: "starred"
+      text: "Articles",
+      url: "articles",
     },
     {
-      text: 'Send email',
-      url: "sendemail"
+      text: "Products",
+      url: "products",
     },
     {
-      text: 'Drafts',
-      url: "drafts"
-    }
+      text: "About Us",
+      url: "about-us",
+    },
+    {
+      text: "Footer",
+      url: "footer",
+    },
   ];
-  const lowersidebarItems = [
-    {
-      text: 'All mail',
-      url: "allmail"
-    },
-    {
-      text: 'Trash',
-      url: "trash"
-    },
-    {
-      text: 'Spam',
-      url: "spam"
-    }]
+  // const lowersidebarItems = [
+  //   {
+  //     text: "All mail",
+  //     url: "allmails",
+  //   },
+  //   {
+  //     text: "Trash",
+  //     url: "trash",
+  //   },
+  //   {
+  //     text: "Spam",
+  //     url: "spam",
+  //   },
+  // ];
   const drawer = (
     <div>
       <div className={classes.toolbar} />
       <Divider />
       <List>
         {sidebarItems.map((item, index) => (
-          <Link to={"/sidebar/" + item.url} key={item.text}>
-            <ListItem onClick={(event) => handleClick(event, item.text)} selected={selectedTab == item.text} button >
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+          <Link to={"/admin/dashboard/" + item.url} key={item.text}>
+            <ListItem
+              onClick={(event) => handleClick(event, item.text)}
+              selected={selectedTab == item.text}
+              button
+            >
+              <ListItemIcon>
+                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              </ListItemIcon>
               <ListItemText primary={item.text} />
             </ListItem>
           </Link>
         ))}
       </List>
       <Divider />
-      <List>
+      {/* <List>
         {lowersidebarItems.map((item, index) => (
-          <Link to={"/sidebar/" + item.url} key={item.text}>
-            <ListItem onClick={(event) => handleClick(event, item.text)} selected={selectedTab == item.text} button >
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+          <Link to={"/admin/dashboard/" + item.url} key={item.text}>
+            <ListItem
+              onClick={(event) => handleClick(event, item.text)}
+              selected={selectedTab == item.text}
+              button
+            >
+              <ListItemIcon>
+                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              </ListItemIcon>
               <ListItemText primary={item.text} />
             </ListItem>
           </Link>
         ))}
-      </List>
+      </List> */}
     </div>
   );
 
-  const container = window !== undefined ? () => window().document.body : undefined;
+  const container =
+    window !== undefined ? () => window().document.body : undefined;
 
   return (
     <div className={classes.root}>
@@ -140,12 +158,12 @@ function Dashboard(props) {
           >
             <MenuIcon />
           </IconButton>
-          <InputBase
+          {/* <InputBase
             className={classes.input}
             placeholder="Search Google Maps"
-            inputProps={{ 'aria-label': 'search google maps' }}
-          />
-          <Avatar style={{ position: "absolute", right: "20px" }}>M</Avatar>
+            inputProps={{ "aria-label": "search google maps" }}
+          /> */}
+          <Avatar style={{ position: "absolute", right: "20px" }}>L</Avatar>
         </Toolbar>
       </AppBar>
       <nav className={classes.drawer} aria-label="mailbox folders">
@@ -154,7 +172,7 @@ function Dashboard(props) {
           <Drawer
             container={container}
             variant="temporary"
-            anchor={theme.direction === 'rtl' ? 'right' : 'left'}
+            anchor={theme.direction === "rtl" ? "right" : "left"}
             open={mobileOpen}
             onClose={handleDrawerToggle}
             classes={{
@@ -183,37 +201,30 @@ function Dashboard(props) {
         <div className={classes.toolbar} />
         {/* Here we'll have to use the routes to be able to navigate through the app and change the tabs w.r.t. the clicked tab btn */}
         <Switch>
-          <Route path="/sidebar/inbox">
-            <Typography paragraph>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-              ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent elementum
-              facilisis leo vel. Risus at ultrices mi tempus imperdiet. Semper risus in hendrerit
-              gravida rutrum quisque non tellus. Convallis convallis tellus id interdum velit laoreet id
-              donec ultrices. Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit
-              adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra nibh cras.
-              Metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Mauris commodo quis
-              imperdiet massa tincidunt. Cras tincidunt lobortis feugiat vivamus at augue. At augue eget
-              arcu dictum varius duis at consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem
-              donec massa sapien faucibus et molestie ac.
+          <Route path="/admin/dashboard/">
+            {/* <Typography paragraph>
+              لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل
+              ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه ...
+              بروشور او فلاير على سبيل المثال ... او نماذج مواقع انترنت ... وعند
+              موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم
+              ويتم وضع النصوص النهائية المطلوبة للتصميم ويقول البعض ان وضع
+              النصوص التجريبية بالتصميم قد تشغل المشاهد عن وضع الكثير من
+              الملاحظات او الانتقادات للتصميم الاساسي.
             </Typography>
             <Typography paragraph>
-              Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper eget nulla
-              facilisi etiam dignissim diam. Pulvinar elementum integer enim neque volutpat ac
-              tincidunt. Ornare suspendisse sed nisi lacus sed viverra tellus. Purus sit amet volutpat
-              consequat mauris. Elementum eu facilisis sed odio morbi. Euismod lacinia at quis risus sed
-              vulputate odio. Morbi tincidunt ornare massa eget egestas purus viverra accumsan in. In
-              hendrerit gravida rutrum quisque non tellus orci ac. Pellentesque nec nam aliquam sem et
-              tortor. Habitant morbi tristique senectus et. Adipiscing elit duis tristique sollicitudin
-              nibh sit. Ornare aenean euismod elementum nisi quis eleifend. Commodo viverra maecenas
-              accumsan lacus vel facilisis. Nulla posuere sollicitudin aliquam ultrices sagittis orci a.
-            </Typography>
+              لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل
+              ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه ...
+              بروشور او فلاير على سبيل المثال ... او نماذج مواقع انترنت ... وعند
+              موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم
+              ويتم وضع النصوص النهائية المطلوبة للتصميم ويقول البعض ان وضع
+              النصوص التجريبية بالتصميم قد تشغل المشاهد عن وضع الكثير من
+              الملاحظات او الانتقادات للتصميم الاساسي.
+            </Typography> */}
           </Route>
-          <Route exact path={"/sidebar"}>
-            <Redirect to={"/sidebar/inbox"}></Redirect>
+          <Route exact path={"/admin"}>
+            <Redirect to={"/admin/articles"}></Redirect>
           </Route>
         </Switch>
-
-
       </main>
     </div>
   );
