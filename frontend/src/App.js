@@ -23,6 +23,7 @@ function App(props) {
       "location"
     );
   });
+  import About from "./pages/About";
 
   return (
     <div className="App">
@@ -44,7 +45,6 @@ function App(props) {
 
         <Route path="*" component={NotFound}></Route>
         {/* every route that is different than the defined ones will render the not found component */}
-       
       </Switch>
 
       {!pathName.includes("admin") && <Footer />}

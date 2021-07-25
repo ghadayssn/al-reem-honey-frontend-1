@@ -28,7 +28,7 @@
   border-radius: 25%;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
   .footer {
     position: relative;
     bottom: 0;

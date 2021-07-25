@@ -21,7 +21,7 @@
 }
 .navBarLogo {
   color: black;
-  margin-left: 10px;
+  margin-left: 1rem;
   cursor: pointer;
   justify-content: start;
 }
