@@ -12,10 +12,9 @@ import NotFound from "./pages/NotFound";
 import Footer from "./components/Footer/footer";
 import ContactForm from "./pages/ContactForm/ContactForm";
 import ProductsPage from "./pages/ProductsPage";
-function App() {
-
 import SignInSide from "./pages/admin/SignIn";
 import Dashboard from "./pages/admin/dashboard";
+
 function App(props) {
   const [pathName, setPathName] = useState("");
   useEffect(() => {
