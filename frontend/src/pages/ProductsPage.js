@@ -16,8 +16,8 @@ const ProductsPage = () => {
   }, []);
   return (
     <div className="blah">
-      <section className="products__container container">
-        <div className="container">
+      <section className="products__container container__prod">
+        <div className="container__prod">
           <div>
             <div className="product">
               {proData &&
