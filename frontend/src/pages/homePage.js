@@ -40,15 +40,15 @@ const HomePage = () => {
       });
   };
   useEffect(() => {
-    if(!data)
-    fetchData();
+    if (!data) fetchData();
     // console.log("data", data);
   });
   return (
     <div className="HomePage">
       <div className="container">
-      <Carousel images={carouselImages} />
+        <Carousel images={carouselImages} />
       </div>
+      <h1 className="section-title container"> المنتجات الاكثر مبيعا </h1>
       {bestSeller &&
         bestSeller.map((best, index) => {
           return (
@@ -63,7 +63,9 @@ const HomePage = () => {
         })}
       {fullWidthImage && <FullWidthImage image={fullWidthImage} />}
 
-      {latestArticles && <Articles title="أحدث المقالات" latestArticles={latestArticles} />}
+      {latestArticles && (
+        <Articles title="أحدث المقالات" latestArticles={latestArticles} />
+      )}
     </div>
   );
 };
