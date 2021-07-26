@@ -28,6 +28,7 @@ const Carousel = (props) => {
   };
   return (
     <Slider {...settings}>
+      {/* {console.log(images)} */}
       {images.map((image) => {
         return (
           <div>
