@@ -6,7 +6,7 @@ const Card = (props) => {
       <div className="product__list">
         <img
           className="product__img"
-          src={props.productData.imgUrl}
+          src={`http://localhost:5000/images/${props.productData.image}`}
           alt={props.productData.title}
         />
       </div>

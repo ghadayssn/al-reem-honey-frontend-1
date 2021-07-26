@@ -1,4 +1,4 @@
- @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css");
 .blah {
   box-sizing: border-box !important;
   font-family: "Nunito Sans", sans-serif !important;
@@ -16,14 +16,11 @@
 .hidden {
   display: none !important;
 }
-*,
-*:before,
-*:after {
-  box-sizing: inherit !important;
-}
+
 #addmargin {
   margin-bottom: 25px !important;
 }
+
 .wrapper {
   text-align: center !important;
   margin: auto !important;
@@ -103,7 +100,6 @@
   object-fit: scale-down !important;
 }
 @media screen and (max-width: 700px) {
-
   .popup {
     width: 35% !important;
     min-width: 300px !important;
@@ -170,8 +166,8 @@
 .product__list:hover:after {
   opacity: 0.5 !important;
 }
-.product__img {
-  width: 100% !important;
+.product__list .product__img {
+  width: 100%;
 }
 .products__container {
   background-color: transparent !important;

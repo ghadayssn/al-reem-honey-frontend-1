@@ -2,6 +2,16 @@
     padding:10px;
     box-shadow: 0px 0px 8px 0px;
 } */
+
+.article-container {
+  padding: 1rem;
+  margin: 3rem;
+}
+
+.article-container a {
+  text-decoration: none;
+  color:black;
+}
 .article-desc {
   white-space: nowrap;
   overflow: hidden !important;

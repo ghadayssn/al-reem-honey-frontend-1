@@ -5,10 +5,19 @@ import Card from "../components/Card";
 const ProductsPage = () => {
   const [data, setData] = useState(null);
   const [proData, setProData] = useState([]);
+
   const fetchProducts = () => {
-    fetch("http://localhost:5000/getProducts")
-      .then((response) => response.json())
-      .then((result) => setProData(result.data));
+    fetch("http://localhost:5000/product/getAllProducts")
+      .then((response) => {
+        if (response.ok) {
+          console.log("response", response);
+          return response.json();
+        }
+      })
+      .then((result) => {
+        console.log("result", result);
+        setProData(result.data);
+      });
   };
 
   useEffect(() => {
