@@ -11,8 +11,10 @@ import HomePage from "./pages/homePage";
 import NotFound from "./pages/NotFound";
 import Footer from "./components/Footer/footer";
 import ContactForm from "./pages/ContactForm/ContactForm";
+import ProductsPage from "./pages/ProductsPage";
 import SignInSide from "./pages/admin/SignIn";
 import Dashboard from "./pages/admin/dashboard";
+
 function App(props) {
   const [pathName, setPathName] = useState("");
   useEffect(() => {
@@ -24,6 +26,7 @@ function App(props) {
     );
   });
   import About from "./pages/About";
+
 
   return (
     <div className="App">
@@ -40,7 +43,7 @@ function App(props) {
         <Route path="/about-us" component={AboutUs}></Route> */}
 
         <Route path="/contact-us" component={ContactForm}></Route>
-        {/* <Route path="/products" component={ProductsPage}></Route> */}
+        <Route path="/products" component={ProductsPage}></Route>
         <Route path="/articles" component={ArticlesPage}></Route>
 
         <Route path="*" component={NotFound}></Route>
