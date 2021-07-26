@@ -1,16 +1,14 @@
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: "Montserrat", sans-serif;
-}
+
 .navbar-img {
   width: 25.59px;
 }
 
 .navBarItems {
   /* direction: rtl; */
-
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
   background: #ffd832;
 
   height: 80px;
