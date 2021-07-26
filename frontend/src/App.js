@@ -14,6 +14,7 @@ import ContactForm from "./pages/ContactForm/ContactForm";
 import ProductsPage from "./pages/ProductsPage";
 import SignInSide from "./pages/admin/SignIn";
 import Dashboard from "./pages/admin/dashboard";
+import About from "./pages/About";
 
 function App(props) {
   const [pathName, setPathName] = useState("");
@@ -25,7 +26,6 @@ function App(props) {
       "location"
     );
   });
-  import About from "./pages/About";
 
 
   return (
@@ -39,8 +39,8 @@ function App(props) {
         {/* Exact means that the url has to only contain the path which in this case is '/'(Slash) */}
         {/* Nothing after the slash */}
 
-        {/* <Route path="/contact-us" component={Contact}></Route>
-        <Route path="/about-us" component={AboutUs}></Route> */}
+        {/* <Route path="/contact-us" component={Contact}></Route>*/}
+        <Route path="/about-us" component={About}></Route> 
 
         <Route path="/contact-us" component={ContactForm}></Route>
         <Route path="/products" component={ProductsPage}></Route>
