@@ -1,0 +1,72 @@
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#name,#email,
+textarea {
+  border: 2px solid #000;
+  border-radius: 3px;
+  padding: 10px;
+  width: 300px;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+#icon {
+  box-align: right;
+}
+
+.some-page-wrapper {
+  margin: 15px;
+  /* border: #ff4500 solid 0.2rem; */
+  height: 70vh;
+  width: 60%;
+  padding-top: 5rem;
+  margin: auto;
+  /* padding-top:6%; */
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  /*  */
+  /* margin: 80px 0px;  */
+}
+
+.first-column {
+  padding-top: 1rem;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+@media (max-width: 1200px) {
+  .column {
+    display: flex;
+    flex-direction: column;
+    height: 10%;
+  }
+  .imagee {
+    width: 20%;
+    height: 20%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

@@ -1,0 +1,190 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css");
+.blah {
+  box-sizing: border-box !important;
+  font-family: "Nunito Sans", sans-serif !important;
+  font-weight: lighter !important;
+  min-width: 300px !important;
+  width: 100% !important;
+  min-height: 300px !important;
+  overflow: auto !important;
+  scrollbar-width: none !important;
+  text-align: center !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+.hidden {
+  display: none !important;
+}
+
+#addmargin {
+  margin-bottom: 25px !important;
+}
+
+.wrapper {
+  text-align: center !important;
+  margin: auto !important;
+}
+
+.button {
+  font-size: 1em !important;
+  color: #101010 !important;
+  padding: 10px 15px !important;
+  margin-top: 25px !important;
+  background-color: tan !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease-out !important;
+}
+
+.button:hover {
+  background: black !important;
+  color: burlywood !important;
+}
+
+.overlay {
+  position: fixed !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  transition: opacity 500ms !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  overflow: auto !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.overlay:target {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+.popup {
+  margin: 70px auto !important;
+  padding: 40px 30px 50px !important;
+  background: wheat !important;
+  width: 35% !important;
+  position: relative !important;
+  transition: all 3s ease-in-out !important;
+  overflow: scroll !important;
+}
+
+.popup h2 {
+  margin: 0 0 30px !important;
+  font-family: sans-serif !important;
+  font-size: 4em !important;
+  font-weight: 300 !important;
+}
+
+.popup .close {
+  position: absolute !important;
+  color: #212527 !important;
+  top: 10px !important;
+  right: 20px !important;
+  transition: all 200ms !important;
+  font-family: -webkit-body, sans-serif !important;
+  font-size: 50px !important;
+  font-weight: 300 !important;
+  text-decoration: none !important;
+}
+
+.popup .close:hover {
+  color: rgb(170, 7, 7) !important;
+}
+
+.popup .content {
+  max-height: 30% !important;
+}
+.popup > img {
+  width: 185px !important;
+  object-fit: scale-down !important;
+}
+@media screen and (max-width: 700px) {
+  .popup {
+    width: 35% !important;
+    min-width: 300px !important;
+  }
+  .popup > img {
+    width: 155px !important;
+    object-fit: scale-down !important;
+  }
+}
+@media screen and (max-width: 1350px) {
+  .popup {
+    width: 35% !important;
+    min-width: 300px !important;
+  }
+  .popup > img {
+    width: 155px !important;
+    object-fit: scale-down !important;
+  }
+  .popup .close {
+    padding: 0px !important;
+  }
+}
+.container__prod {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  height: 100% !important;
+  background-color: transparent !important;
+}
+
+.product {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  grid-template-rows: repeat(2, 1fr) !important;
+  gap: 20px 30px !important;
+  padding: 20px !important;
+  max-width: 960px !important;
+  margin: 0% !important;
+  margin-bottom: 25px !important;
+  background-color: transparent !important;
+}
+.product > img {
+  padding-bottom: 0% !important;
+}
+.product__list {
+  position: relative !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  box-shadow: 0 0 15px 0 #212527 !important;
+  transition: all 250ms ease-in-out !important;
+}
+.product__list:after {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  display: block !important;
+  height: 100% !important;
+  width: 100% !important;
+  background-color: #3e363f !important;
+  opacity: 0 !important;
+  transition: all 500ms ease-in-out !important;
+}
+.product__list:hover:after {
+  opacity: 0.5 !important;
+}
+.product__list .product__img {
+  width: 100%;
+}
+.products__container {
+  background-color: transparent !important;
+}
+.detail__title,
+.detail__description {
+  text-transform: uppercase !important;
+}
+.detail__availability {
+  font-weight: bold !important;
+}
+
+@media (max-width: 600px) {
+  .product {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: repeat(3, 1fr) !important;
+    min-width: 400px !important;
+  }
+}
