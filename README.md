@@ -1,6 +1,6 @@
-###This is a react/ node/ mongoose blog website.
+### This is a react/ node/ mongoose blog website.
 
-###It introduces the benefits of honey and show the local products of our client Mr. Bahaa Jaber
+### It introduces the benefits of honey and show the local products of our client Mr. Bahaa Jaber
 
 ## Available Scripts 
 
