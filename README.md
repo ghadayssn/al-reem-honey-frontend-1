@@ -17,4 +17,4 @@ The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
 You can the this blog deployed on:
-RihamBadra/al-reem-honey-frontend
+https://alreemhoney2021-riham-badra.herokuapp.com/
