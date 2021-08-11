@@ -64,7 +64,7 @@ const ProductsPage = () => {
                     {data && data.availability}
                   </p>
                   <div className="box">
-                    <a className="button" href="tel:+96176744184">
+                    <a className="button" href="tel:+96103692451">
                       Call Us
                     </a>
                   </div>
